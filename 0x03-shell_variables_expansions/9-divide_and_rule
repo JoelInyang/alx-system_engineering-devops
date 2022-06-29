@@ -1,3 +1,2 @@
 #!/bin/bash
-echo $((FBREAS.<F3>
-
+echo $((POWER/DIVIDE))
