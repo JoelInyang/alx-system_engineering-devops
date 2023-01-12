@@ -1,2 +1,4 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/hbt+n/).join
+# This is a script that must match the pattern
+# "hbn,hbtn, hbttn, hbtttn, hbttttn" not "hbn"
+puts ARGV[0].scan(/hbt{1,5}n/).join
