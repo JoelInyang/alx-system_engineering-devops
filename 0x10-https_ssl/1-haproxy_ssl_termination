@@ -33,8 +33,8 @@ frontend www-https
 backend www-backend
    balance  roundrobin
    redirect scheme https if !{ ssl_fc }
-   server 1319-web-01 100.26.152.67 check
-   server 1319-web-02 18.207.3.106:80 check
+   server 1319-web-01 100.26.238.77 check
+   server 1319-web-02 18.209.178.206 check
 
 backend letsencrypt-backend
    server letsencrypt 127.0.0.1:54321
