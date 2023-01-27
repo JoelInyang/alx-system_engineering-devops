@@ -3,11 +3,11 @@
 # a custom header
 # Add HAProxy PPA
 sudo apt-get -y install software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy-2.5
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.6
 sudo apt-get -y update
 
 # Install HAProxy
 sudo apt-get -y install haproxy
 sudo sed -i -e '$aENABLED=1\n' /etc/default/haproxy
-sudo sed -i -e '$a\listen http-in\n\tbind :80\n\tbalance roundrobin\n\tserver 87235-web-01 100.26.238.77:80 check\n\tserver 87235-web-02 18.209.178.206:80 check\n' /etc/haproxy/haproxy.cfg
+sudo sed -i -e '$a\listen http-in\n\tbind :80\n\tbalance roundrobin\n\tserver 76829-web-01 100.26.238.77:80 check\n\tserver 76829-web-02 18.209.178.206:80 check\n' /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
