@@ -35,7 +35,7 @@ defaults
 
 frontend myfrontend
         bind *:80
-        bind *:443 ssl crt /etc/letsencrypt/live/www.hamsel.tech/fullchain.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.hamsel.tech.pem
         http-request redirect scheme https code 301 if { hdr(Host) -i www.hamsel.tech } !{ ssl_fc }
         default_backend myservers
 
