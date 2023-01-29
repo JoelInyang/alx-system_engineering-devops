@@ -9,5 +9,5 @@ sudo apt-get -y update
 # Install HAProxy
 sudo apt-get -y install haproxy
 sudo sed -i -e '$aENABLED=1\n' /etc/default/haproxy
-sudo sed -i -e '$a\listen http-in\n\tbind :80\n\tbalance roundrobin\n\tserver 76829-web-01 100.26.238.77:80 check\n\tserver 76829-web-02 18.209.178.206:80 check\n' /etc/haproxy/haproxy.cfg
+sudo sed -i -e '$a\listen http-in\n\tbind :80\n\tbalance roundrobin\n\tserver 76829-web-01 54.210.70.99:80 check\n\tserver 76829-web-02 54.144.150.166:80 check\n' /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
